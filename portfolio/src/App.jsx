@@ -96,7 +96,7 @@ function FeatureCard({ card, index }) {
         initial={{ scale: 0.95, opacity: 0 }}
         animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 0 }}
         transition={{ duration: 0.8, delay: index * 0.15, ease: CARD_EASE }}
-        className="relative min-h-[320px] overflow-hidden rounded-2xl"
+        className="relative min-h-[280px] overflow-hidden rounded-2xl sm:min-h-[320px]"
       >
         <video
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260406_133058_0504132a-0cf3-4450-a370-8ea3b05c95d4.mp4"
@@ -176,15 +176,15 @@ function ProjectCard({ project, index }) {
       animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 0 }}
       transition={{ duration: 0.8, delay: index * 0.15, ease: CARD_EASE }}
       whileHover={{ y: -6, scale: 1.02 }}
-      className="flex min-h-[340px] flex-col overflow-hidden rounded-2xl bg-[#212121] shadow-none transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/30"
+      className="flex min-h-[300px] flex-col overflow-hidden rounded-2xl bg-[#212121] shadow-none transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/30 sm:min-h-[340px]"
     >
       <div className="aspect-[16/9] w-full overflow-hidden bg-black/30">
         <img src={project.image} alt="" className="h-full w-full object-cover" />
       </div>
 
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
+      <div className="flex flex-1 flex-col p-4 sm:p-6">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="text-lg leading-tight sm:text-xl" style={{ color: '#E1E0CC' }}>
+          <h3 className="text-base leading-tight sm:text-xl" style={{ color: '#E1E0CC' }}>
             {project.title}
           </h3>
           <span className="text-xs text-gray-500">{project.number}</span>
@@ -205,16 +205,16 @@ function ProjectCard({ project, index }) {
           ))}
         </div>
 
-        <div className="mt-auto flex flex-wrap gap-3 pt-5">
+        <div className="mt-auto flex flex-wrap gap-3 pt-4 sm:pt-5">
           <a
             href="#"
-            className="rounded-full border border-white/10 bg-black px-4 py-2 text-sm text-primary/80 transition hover:text-primary"
+            className="rounded-full border border-white/10 bg-black px-3 py-2 text-sm text-primary/80 transition hover:text-primary sm:px-4"
           >
             View Project
           </a>
           <a
             href="#"
-            className="rounded-full border border-white/10 bg-black px-4 py-2 text-sm text-primary/80 transition hover:text-primary"
+            className="rounded-full border border-white/10 bg-black px-3 py-2 text-sm text-primary/80 transition hover:text-primary sm:px-4"
           >
             GitHub
           </a>
@@ -235,10 +235,10 @@ function BlogCard({ post, index }) {
       animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 0 }}
       transition={{ duration: 0.8, delay: index * 0.15, ease: CARD_EASE }}
       whileHover={{ y: -6, scale: 1.02 }}
-      className="flex min-h-[260px] flex-col rounded-2xl bg-[#212121] p-5 transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/30"
+      className="flex min-h-[220px] flex-col rounded-2xl bg-[#212121] p-4 transition-shadow duration-300 hover:shadow-2xl hover:shadow-black/30 sm:min-h-[260px] sm:p-5"
     >
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-lg leading-tight sm:text-xl" style={{ color: '#E1E0CC' }}>
+        <h3 className="text-base leading-tight sm:text-xl" style={{ color: '#E1E0CC' }}>
           {post.title}
         </h3>
         <span className="text-xs text-gray-500">{post.date}</span>
@@ -269,7 +269,7 @@ function SkillGroup({ group, index }) {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.7, delay: index * 0.12, ease: EASE_OUT }}
-      className="rounded-2xl bg-[#101010] p-6 text-center"
+      className="rounded-2xl bg-[#101010] p-5 text-center sm:p-6"
     >
       <h3 className="text-sm uppercase tracking-[0.18em] text-primary">{group.title}</h3>
       <div className="mt-5 flex flex-wrap justify-center gap-2">
@@ -434,7 +434,7 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
 
           <nav className="absolute left-1/2 top-0 z-20 -translate-x-1/2">
-            <ul className="flex items-center gap-3 rounded-b-2xl bg-black px-4 py-2 text-[10px] sm:gap-6 sm:text-xs md:gap-12 md:rounded-b-3xl md:px-8 md:text-sm lg:gap-14">
+            <ul className="flex max-w-[calc(100vw-1rem)] items-center gap-3 overflow-x-auto rounded-b-2xl bg-black px-4 py-2 text-[10px] sm:gap-6 sm:text-xs md:gap-12 md:rounded-b-3xl md:px-8 md:text-sm lg:gap-14">
               {navItems.map((item) => (
                 <li key={item.label}>
                   <a
@@ -456,12 +456,11 @@ function App() {
           </nav>
 
           <div className="absolute bottom-0 left-0 right-0 z-10 p-4 sm:p-6 md:p-10">
-            <div className="grid grid-cols-12 items-end gap-6 md:gap-8">
+            <div className="grid grid-cols-12 items-end gap-4 sm:gap-6 md:gap-8">
               <div className="col-span-12 md:col-span-8">
                 <WordsPullUp
-                  text="Prisma"
-                  showAsterisk
-                  className="text-[26vw] font-medium leading-[0.85] tracking-[-0.07em] text-[#E1E0CC] sm:text-[24vw] md:text-[22vw] lg:text-[20vw] xl:text-[19vw] 2xl:text-[20vw]"
+                  text="Leander*"
+                  className="text-[18vw] sm:text-[17vw] md:text-[15vw] lg:text-[13vw] xl:text-[12vw] 2xl:text-[11vw] leading-[0.9] tracking-[-0.02em] text-primary"
                 />
               </div>
 
@@ -471,11 +470,9 @@ function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.5, ease: EASE_OUT }}
-                  className="text-xs leading-[1.2] text-primary/70 sm:text-sm md:text-base"
+                  className="max-w-[28rem] text-xs leading-[1.2] text-primary/70 sm:text-sm md:text-base"
                 >
-                  Prisma is a worldwide network of visual artists, filmmakers and storytellers bound
-                  not by place, status or labels but by passion and hunger to unlock potential
-                  through our unique perspectives.
+                  Building machine learning systems, full-stack applications, and scalable tools with a focus on real-world impact.
                 </motion.p>
 
                 <motion.button
@@ -483,9 +480,9 @@ function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.7, ease: EASE_OUT }}
-                  className="group mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-medium text-black transition-all hover:gap-3 sm:mt-5 sm:text-base"
+                  className="group mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-black transition-all hover:gap-3 sm:mt-5 sm:px-5 sm:text-base"
                 >
-                  Join the lab
+                  Download Résumé
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black transition-transform group-hover:scale-110 sm:h-10 sm:w-10">
                     <ArrowRight className="h-4 w-4 text-primary" />
                   </span>
@@ -500,22 +497,22 @@ function App() {
         <div className="mx-auto max-w-6xl rounded-2xl bg-[#101010] px-6 py-10 text-center sm:px-10 md:px-16 md:py-16">
           <p className="text-[10px] uppercase tracking-[0.2em] text-primary sm:text-xs">Visual arts</p>
 
-          <h2 className="mx-auto mt-6 max-w-3xl text-3xl font-normal leading-[0.95] sm:text-4xl sm:leading-[0.9] md:text-5xl lg:text-6xl xl:text-7xl">
-            <WordsPullUpMultiStyle
-              segments={[
-                { text: 'I am Marcus Chen,', className: 'font-normal' },
-                { text: 'a self-taught director.', className: 'font-serif italic' },
-                {
-                  text: 'I have skills in color grading, visual effects, and narrative design.',
-                  className: 'font-normal',
-                },
-              ]}
-            />
-          </h2>
+          <h2 className="mx-auto mt-6 max-w-3xl text-2xl font-normal leading-[0.95] sm:text-4xl sm:leading-[0.9] md:text-5xl lg:text-6xl xl:text-7xl">
+  <WordsPullUpMultiStyle
+    segments={[
+  { text: 'I am Leander,', className: 'font-normal' },
+  { text: 'I build systems that think.', className: 'font-serif italic' },
+  {
+    text: 'Focused on machine learning, scalable applications, and tools that solve real-world problems.',
+    className: 'font-normal',
+  },
+]}
+  />
+</h2>
 
           <p
             ref={aboutParagraphRef}
-            className="mx-auto mt-8 max-w-4xl text-xs text-[#DEDBC8] sm:text-sm md:mt-10 md:text-base"
+            className="mx-auto mt-8 max-w-4xl text-xs leading-relaxed text-[#DEDBC8] sm:text-sm md:mt-10 md:text-base"
           >
             {aboutBodyText.split('').map((char, index) => (
               <AnimatedLetter
@@ -692,8 +689,8 @@ function App() {
       >
         <div className="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-gray-400 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[#E1E0CC]">Your Name</p>
-            <p className="mt-1">© 2026 All rights reserved</p>
+            <p className="text-[#E1E0CC]">Leander Antony J</p>
+            {/* <p className="mt-1">© 2026 All rights reserved</p> */}
           </div>
 
           <div className="flex flex-wrap gap-4">
