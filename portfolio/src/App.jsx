@@ -475,18 +475,20 @@ function App() {
                   Building machine learning systems, full-stack applications, and scalable tools with a focus on real-world impact.
                 </motion.p>
 
-                <motion.button
+                <motion.a
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.7, ease: EASE_OUT }}
+                  href="/Resume.pdf"
+                  download="Resume.pdf"
                   className="group mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-black transition-all hover:gap-3 sm:mt-5 sm:px-5 sm:text-base"
                 >
                   Download Résumé
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black transition-transform group-hover:scale-110 sm:h-10 sm:w-10">
                     <ArrowRight className="h-4 w-4 text-primary" />
                   </span>
-                </motion.button>
+                </motion.a>
               </div>
             </div>
           </div>
