@@ -1,6 +1,7 @@
 import { useMemo, useRef } from 'react'
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Check } from 'lucide-react'
+import resumePdf from '../Resume.pdf'
 
 const EASE_OUT = [0.16, 1, 0.3, 1]
 const CARD_EASE = [0.22, 1, 0.36, 1]
@@ -480,7 +481,7 @@ function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.7, ease: EASE_OUT }}
-                  href="/Resume.pdf"
+                  href={resumePdf}
                   download="Resume.pdf"
                   className="group mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-black transition-all hover:gap-3 sm:mt-5 sm:px-5 sm:text-base"
                 >
