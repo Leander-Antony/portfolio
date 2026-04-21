@@ -702,13 +702,26 @@ function App() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#" className="transition-colors hover:text-[#E1E0CC]">
+            <a
+              href="https://github.com/Leander-Antony"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-[#E1E0CC]"
+            >
               GitHub
             </a>
-            <a href="#" className="transition-colors hover:text-[#E1E0CC]">
+            <a
+              href="https://www.linkedin.com/in/leanderantony/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-[#E1E0CC]"
+            >
               LinkedIn
             </a>
-            <a href="#" className="transition-colors hover:text-[#E1E0CC]">
+            <a
+              href="mailto:leander.antony2023@gmail.com"
+              className="transition-colors hover:text-[#E1E0CC]"
+            >
               Email
             </a>
           </div>
