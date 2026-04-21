@@ -295,7 +295,7 @@ function App() {
   })
 
   const aboutBodyText =
-    'Over the last seven years, I have worked with Parallax, a Berlin-based production house that crafts cinema, series, and Noir Studio in Paris. Together, we have created work that has earned international acclaim at several major festivals.'
+    'Over the last few years, I have been building machine learning projects, full-stack applications, and data-driven systems. Through continuous experimentation and real-world problem solving, I’ve focused on creating tools that are practical, scalable, and impactful.'
 
   const navItems = [
     { label: 'Our story', href: '#story' },
@@ -306,42 +306,47 @@ function App() {
   ]
 
   const featureCards = [
-    { type: 'video' },
-    {
-      type: 'text',
-      title: 'Project Storyboard.',
-      number: '(01)',
-      icon: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171918_4a5edc79-d78f-4637-ac8b-53c43c220606.png&w=1280&q=85',
-      items: [
-        'Shape cinematic scenes with precision guides.',
-        'Map rhythm, framing, and transitions in one flow.',
-        'Keep every visual beat aligned to your intent.',
-        'Export clear boards for collaborative production.',
-      ],
-    },
-    {
-      type: 'text',
-      title: 'Smart Critiques.',
-      number: '(02)',
-      icon: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171741_ed9845ab-f5b2-4018-8ce7-07cc01823522.png&w=1280&q=85',
-      items: [
-        'Receive AI analysis tuned for visual narratives.',
-        'Turn feedback into concise creative notes instantly.',
-        'Sync critiques with your editing and writing tools.',
-      ],
-    },
-    {
-      type: 'text',
-      title: 'Immersion Capsule.',
-      number: '(03)',
-      icon: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171809_f56666dc-c099-4778-ad82-9ad4f209567b.png&w=1280&q=85',
-      items: [
-        'Silence non-essential notifications while creating.',
-        'Blend ambient soundscapes to hold creative focus.',
-        'Sync sessions with your calendar and team schedule.',
-      ],
-    },
-  ]
+  { type: 'video' },
+
+  {
+    type: 'text',
+    title: 'Machine Learning Systems.',
+    number: '(01)',
+    icon: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171918_4a5edc79-d78f-4637-ac8b-53c43c220606.png&w=1280&q=85',
+    items: [
+      'Build and train models for real-world problems.',
+      'Apply classification, recommendation, and automation pipelines.',
+      'Focus on accuracy, performance, and practical usability.',
+      'Turn raw data into intelligent decision systems.',
+    ],
+  },
+
+  {
+    type: 'text',
+    title: 'Full-Stack Applications.',
+    number: '(02)',
+    icon: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171741_ed9845ab-f5b2-4018-8ce7-07cc01823522.png&w=1280&q=85',
+    items: [
+      'Design and build end-to-end web applications.',
+      'Integrate ML models into usable interfaces.',
+      'Work with APIs, backend logic, and deployment pipelines.',
+      'Create tools that people can actually use.',
+    ],
+  },
+
+  {
+    type: 'text',
+    title: 'Data & System Design.',
+    number: '(03)',
+    icon: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171809_f56666dc-c099-4778-ad82-9ad4f209567b.png&w=1280&q=85',
+    items: [
+      'Work with structured and unstructured data efficiently.',
+      'Design scalable data pipelines and workflows.',
+      'Use tools like Power BI for visualization and insights.',
+      'Focus on clean architecture and maintainable systems.',
+    ],
+  },
+]
 
   const projectCards = [
     {
